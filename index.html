@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Math Sprint Game</title>
+    <title>Sprint de Math</title>
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -11,7 +11,7 @@
     <div class="game-container">
         <!-- Header -->
         <div class="header">
-            <h1>Math Sprint Game</h1>
+            <h1>Sprint de Math</h1>
         </div>
 
         <!-- Splash Page -->
@@ -57,7 +57,7 @@
                 </div>
                 <!--  Start button -->
                 <div class="selection-footer">
-                    <button class="start" type="submit">Start Round</button>
+                    <button class="start" type="submit">Commencer</button>
                 </div>
             </form>
         </div>
@@ -72,18 +72,14 @@
             <!-- Item Container -->
             <div class="item-container">
                 <div class="selected-item"></div>
-                <!-- <div class="item">
-                    <h1>3 x 3 = 30</h1>
-                </div>
-                <div class="item">
-                    <h1>3 x 3 = 30</h1>
-                </div> -->
+               
+
                 
             </div>
-            <!-- Right/Wrong Buttons -->
+            <!-- Vrais / Faux Buttons -->
             <div class="item-footer">
-                <button class="wrong" onclick="select(false)" >Wrong</button>
-                <button class="right" onclick="select(true)">Right</button>
+                <button class="wrong" onclick="select(false)" >Faux</button>
+                <button class="right" onclick="select(true)">Vrais</button>
             </div>
         </div>
 
@@ -91,14 +87,14 @@
         <div class="card" id="score-page" hidden>
             <!-- Score Container -->
             <div class="score-container">
-                <h1 class="title">Your Time</h1>
+                <h1 class="title">Votre Temps</h1>
                 <h1 class="final-time">3.4s</h1>
                 <h1 class="base-time">Base Time: 2.4s</h1>
                 <h1 class="penalty-time">Penalty: +1.0s</h1>
             </div>
             <!-- Play Again Button -->
             <div class="score-footer">
-                <button class="play-again" onclick="playAgain()" hidden>Play Again</button>
+                <button class="play-again" onclick="playAgain()" hidden>Re-jouer</button>
             </div>
         </div>
     </div>

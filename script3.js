@@ -50,7 +50,7 @@ function getRandomInt(max) {
 }
 
 function createEquations() {
-    // Configure nbr of right and wrong Equations.
+    // Configure nbr de right et wrong Equations.
     let nbrRightEquations = getRandomInt(questionAmount);
     let nbrWrongEquations = questionAmount -  nbrRightEquations; 
     console.log('correct equation :', nbrRightEquations);
@@ -83,7 +83,7 @@ function createEquations() {
 function populateEquationToDOM() {
     itemContainer.textContent = '';
     
-    // create a blank div above to make Space 
+    // Création d'une div vide  au dessus to make Space 
     const upperSpace = document.createElement('div');
     upperSpace.classList.add('height-240');
     itemContainer.appendChild(upperSpace); 
@@ -104,7 +104,7 @@ function populateEquationToDOM() {
         itemContainer.appendChild(equationContainer);
     })
 
-    // create a blank div under the equation for scroll enable
+    // Création d'une div vide sous les équation pour permettre le scroll
     const lowerSpace = document.createElement('div'); 
     lowerSpace.classList.add('height-500');
     itemContainer.appendChild(lowerSpace);
@@ -135,7 +135,7 @@ function getSavedBestScores() {
     bestScoresToDOM(); 
 }
 
-// Score Saved to local storage if Better than previous
+// Score Saved to local storage si meilleur score.. 
 function saveScoreToLocalStorage() { 
     const questionAmountValue = Number(questionAmount);
     
@@ -152,7 +152,7 @@ function saveScoreToLocalStorage() {
     getSavedBestScores();
 }
 
-// Reset the Game when user press play again button
+// Reset le jeux quand le user press le button
 function playAgain(){ 
     equationsArray = []; 
     playerGuessArray = [];
@@ -166,22 +166,22 @@ function playAgain(){
 
 // Show Score Page 
 function showScorePage() {
-    // Reset scroll to top 0 { Je ne sais pas pourquoi je dois le mettre specifiquement dans cette fonction et pas dans playAgain function??? }
+    // Reset le scroll à top 0 { Je ne sais pas pourquoi je dois le mettre specifiquement dans cette fonction et pas dans playAgain function??? }
     itemContainer.scrollTo({top: 0});
     // show score Page
     gamePage.hidden = true; 
     scorePage.hidden = false; 
-    // Show Play Again button after 1s
+    // Show Play Again button après 1 seconde
     setTimeout(() => { playAgainBtn.hidden = false }, 1000); 
 
 }
 
-// Populate data for score Page before showing it 
+// Populate data for score Page avant de l'afficher
 function populateDataScorePage() {
     finalTime = timePlayed + penaltyTime; 
     finalTimeEl.textContent = `${finalTime.toFixed(1)}s`; 
-    baseTimeEl.textContent = `Base Time : ${timePlayed.toFixed(1)}s`; 
-    penaltyTimeEl.textContent = `Penalty Time : ${penaltyTime}s`;
+    baseTimeEl.textContent = `Temps : ${timePlayed.toFixed(1)}s`; 
+    penaltyTimeEl.textContent = `Penalité : ${penaltyTime}s`;
     saveScoreToLocalStorage();
     showScorePage();
 }
@@ -218,7 +218,7 @@ function startChrono() {
     btnGamePage.removeEventListener('click', startChrono);
 }
 
-// Select Right or Wrong guess + Onclick Scrolling
+// Select Right or Wrong + Onclick Scrolling
 function select(playerGuess) {
     
     valueY += 80; 
@@ -233,7 +233,7 @@ function showGamePage(){
     gamePage.hidden = false; 
 }
 
-// Set Up and Show the countdown
+// Set Up and Show le countdown
 function showCountdown(){
     splashPage.hidden = true; 
     countdownPage.hidden = false;

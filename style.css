@@ -26,7 +26,7 @@ body {
   border: 1px solid black;
   box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.5);
   width: 530px;
-  height: 80vh;
+  height: 95vh;
   position: relative;
   background: rgba(255, 255, 255, 0.5);
   user-select: none;
@@ -214,6 +214,7 @@ button:active {
 .play-again {
   width: 90%;
   background: var(--primary-color);
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.5);
 }
 
 /* Countdown Page ---------------------- */
